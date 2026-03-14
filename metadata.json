@@ -1,0 +1,7 @@
+{
+  "name": "StudyBuddy AI",
+  "description": "An AI-powered study assistant that generates study notes, explanations, and summaries from questions, topics, or images in English, Hindi, and Gujarati.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

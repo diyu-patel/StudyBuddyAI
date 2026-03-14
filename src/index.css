@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  
+  --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
+  --shadow-premium-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.08), 0 8px 15px -8px rgba(0, 0, 0, 0.03);
+}
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-[#121212] antialiased transition-colors duration-300;
+  }
+  
+  .dark body {
+    @apply bg-[#0A0A0A] text-[#F5F5F5];
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-premium;
+}
+
+.premium-gradient {
+  background: radial-gradient(circle at top left, #f0fdf4 0%, #ffffff 50%, #f9fafb 100%);
+  transition: background 0.3s ease;
+}
+
+.dark .premium-gradient {
+  background: radial-gradient(circle at top left, #062016 0%, #0A0A0A 50%, #050505 100%);
+}
